@@ -4325,8 +4325,8 @@ spawn(function()
     end
 end)
 
-local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
-CamShake:Stop()
+-- local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
+-- CamShake:Stop()
     
 Set:Toggle("Auto Click",false,function(value)
 _G.AutoClick = value
@@ -4444,8 +4444,7 @@ end)
     
     _G.Kill_At = 25
 
-    Set:Slider("Kill At %",1,100,25,function(value)
-
+    Set:Slider("Kill At %",1,100,35,function(value)
         _G.Kill_At = value
     end)
     
@@ -6285,21 +6284,21 @@ end
 --      end)
 --     end)
     
-    spawn(function()
-        game:GetService("RunService").RenderStepped:Connect(function()
-            pcall(function()
-                if UseSkill then
-                    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Notifications:GetChildren()) do
-                        if v.Name == "NotificationTemplate" then
-                            if string.find(v.Text,"Skill locked!") then
-                                v:Destroy()
-                            end
-                        end
-                    end
-                end
-            end)
-        end)
-    end)
+    -- spawn(function()
+    --     game:GetService("RunService").RenderStepped:Connect(function()
+    --         pcall(function()
+    --             if UseSkill then
+    --                 for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Notifications:GetChildren()) do
+    --                     if v.Name == "NotificationTemplate" then
+    --                         if string.find(v.Text,"Skill locked!") then
+    --                             v:Destroy()
+    --                         end
+    --                     end
+    --                 end
+    --             end
+    --         end)
+    --     end)
+    -- end)
     
     spawn(function()
         pcall(function()
@@ -6458,21 +6457,21 @@ end
         end
     end)
     --LockSkillMasFCakeandBone
-    spawn(function()
-        game:GetService("RunService").RenderStepped:Connect(function()
-            pcall(function()
-                if UseSkillKub then
-                    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Notifications:GetChildren()) do
-                        if v.Name == "NotificationTemplate" then
-                            if string.find(v.Text,"Skill locked!") then
-                                v:Destroy()
-                            end
-                        end
-                    end
-                end
-            end)
-        end)
-    end)
+    -- spawn(function()
+    --     game:GetService("RunService").RenderStepped:Connect(function()
+    --         pcall(function()
+    --             if UseSkillKub then
+    --                 for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Notifications:GetChildren()) do
+    --                     if v.Name == "NotificationTemplate" then
+    --                         if string.find(v.Text,"Skill locked!") then
+    --                             v:Destroy()
+    --                         end
+    --                     end
+    --                 end
+    --             end
+    --         end)
+    --     end)
+    -- end)
     --RemoteSkillMasFCakeandBone
     spawn(function()
         pcall(function()
